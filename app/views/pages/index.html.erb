@@ -1,2 +1,89 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+  <div id="ribbon">
+  </div>
+  <div class="clearFloat"></div>
+  <div id="graf1">
+    <div id="graf12">
+    </div>
+    <div class="Txt_El">
+      
+        <p class="lastNode">El conocimiento debe ser reconocido como un patrimonio producto de todos los seres humanos, fruto de sus más de 4000 generaciones, inagotable y disponible gracias a las nuevas tecnologías y a las ancestrales tradiciones, por tanto, no debemos privar a las sociedades de acceder, beneficiarse y participar activamente de él.
+      </p>
+    </div>
+  </div>
+  <div class="clearFloat"></div>
+  <div id="graf13">
+    <div id="graf2">
+    </div>
+    <div class="Txt_El2">
+      
+        <p class="lastNode">El buen conocer es la base sobre la cual se asienta el buen vivir. El acceso a los saberes ancestrales, la cultura, la  ciencia y la tecnología  es lo que permite el verdadero progreso de la sociedad. Cualquier cosa distinta a eso significaría una disminución de la calidad de vida de los pueblos, algo totalmente inaceptable.
+      </p>
+    </div>
+  </div>
+  <div class="clearFloat"></div>
+  <div id="graf14">
+    <div id="graf3">
+    </div>
+    <div class="Txt_Existen">
+      
+        <p class="lastNode">Existen ejemplos reales de economías sociales del conocimiento común y abierto a pequeña y mediana escala que funcionan.  Ha llegado el momento de que un país apueste por desarrollar estos modelos productivos más allá de las experiencias fragmentadas y locales que componen hoy en dia las redes de conocimientos libres
+      </p>
+    </div>
+  </div>
+  <div class="clearFloat"></div>
+  <div id="graf15">
+    <div id="graf4">
+    </div>
+    <div class="Txt_El3">
+      
+        <p class="lastNode">El diseño e implementación de una economía social del conocimiento común y abierto, debe ser el resultado del esfuerzo conjunto, participativo y colaborativo, de agentes sociales (comunitarios y ciudadanos), institucionales e investigadores (expertas y activistas que nutran al proceso con su experiencia) y debe reflejar los modos y valores de la sociedad del conocimiento que esperan construir.
+      </p>
+    </div>
+  </div>
+  <div class="clearFloat"></div>
+</div>
+
+
+<div id="footer-form">
+
+ 
+<%= form_for @signer, :url => sign_path do |f| %>
+<fieldset>
+<legend>Firma el manifiesto</legend>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Nombre</label>
+      <%= f.text_field :name, :placeholder => "Nombre completo", :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Correo Electrónico</label>
+      <%= f.email_field :email, :placeholder => "Dirección de correo de contacto", :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Institución / Empresa / Colectivo</label>
+      <%= f.text_field :collective, :placeholder => "Nombre completo de la agrupación" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>País</label>
+      <%= f.text_field :state, :placeholder => "País de residencia", :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Comentarios</label>
+      <%= f.text_area :comment, :placeholder => "Comentarios adicionales" %>
+    </div>
+  </div>
+  <div class="row">
+  <button type="submit">Firmar el manifiesto</button>
+  </div>
+</fieldset>
+<% end %>
+
+</div>

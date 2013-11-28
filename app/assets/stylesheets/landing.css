@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+body {
+	background-color: #fff3e3;
+	background-attachment: scroll;
+	background-position:center; 
+	background-image: url(/assets/backgroundFlok.jpg);
+	background-repeat: repeat-x;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+body * {
+	font-size: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+p {
+	margin-bottom: 1.1em;
+	margin-top: 0;
+}
+#main p.lastNode {
+	margin-bottom: 0;
+}
+a:link img, a:visited img {
+	border: none;
+}
+div.clearFloat {
+	clear: both;
+	font-size: 0;
+	height: 0;
+	line-height: 0px;
+}
+li.clearFloat {
+	clear: both;
+}
+ul.symbolList {
+	display: inline;
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.AbsWrap {
+	position: relative;
+	width: 100%;
+}
+.rowWrap {
+	width: 100%;
+}
+#main {
+	margin: 0 auto;
+	width: 1024px;
+}
+#logo {
+	margin-left: 422px;
+	margin-top: 41px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	background-image: url(/assets/logo.png);
+	width: 181px;
+	padding-top: 0px;
+	height: 307px;
+}
+html > body #logo {
+	height: auto;
+	min-height: 308px;
+}
+#ribbon {
+	margin-left: 206px;
+	margin-top: 25px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	background-image: url(/assets/ribbon.png);
+	width: 614px;
+	padding-top: 0px;
+	height: 104px;
+}
+html > body #ribbon {
+	height: auto;
+	min-height: 105px;
+}
+#graf1 {
+	margin-left: 27px;
+	margin-top: 40px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	width: 970px;
+	padding-top: 0px;
+	height: 429px;
+}
+html > body #graf1 {
+	height: auto;
+	min-height: 430px;
+}
+#graf12 {
+	margin-left: 29px;
+	margin-top: 7px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	background-image: url(/assets/graf1.jpg);
+	width: 416px;
+	padding-top: 0px;
+	height: 415px;
+}
+html > body #graf12 {
+	height: auto;
+	min-height: 416px;
+}
+.Txt_El {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 180%;
+	text-align: left;
+	color: #373735;
+	line-height: 200%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	margin-right: 45px;
+	margin-top: 83px;
+	display: inline;
+	float: right;
+	margin-bottom: 0;
+	width: 385px;
+}
+#graf13 {
+	margin-left: 27px;
+	margin-top: 2px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	width: 970px;
+	padding-top: 0px;
+	height: 429px;
+}
+html > body #graf13 {
+	height: auto;
+	min-height: 430px;
+}
+#graf2 {
+	margin-left: 29px;
+	margin-top: 7px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	background-image: url(/assets/graf2.jpg);
+	width: 416px;
+	padding-top: 0px;
+	height: 415px;
+}
+html > body #graf2 {
+	height: auto;
+	min-height: 416px;
+}
+.Txt_El2 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 180%;
+	text-align: left;
+	color: #373735;
+	line-height: 200%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	margin-right: 45px;
+	margin-top: 78px;
+	display: inline;
+	float: right;
+	margin-bottom: 0;
+	width: 394px;
+}
+#graf14 {
+	margin-left: 27px;
+	margin-top: 1px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	width: 970px;
+	padding-top: 0px;
+	height: 429px;
+}
+html > body #graf14 {
+	height: auto;
+	min-height: 430px;
+}
+#graf3 {
+	margin-left: 29px;
+	margin-top: 6px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	background-image: url(/assets/graf3.jpg);
+	width: 416px;
+	padding-top: 0px;
+	height: 415px;
+}
+html > body #graf3 {
+	height: auto;
+	min-height: 416px;
+}
+.Txt_Existen {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 180%;
+	text-align: left;
+	color: #373735;
+	line-height: 200%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	margin-right: 45px;
+	margin-top: 77px;
+	display: inline;
+	float: right;
+	margin-bottom: 0;
+	width: 394px;
+}
+#graf15 {
+	margin-left: 27px;
+	margin-top: 1px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	width: 970px;
+	padding-top: 0px;
+	height: 429px;
+}
+html > body #graf15 {
+	height: auto;
+	min-height: 430px;
+}
+#graf4 {
+	margin-left: 29px;
+	margin-top: 6px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	background-image: url(/assets/graf4.jpg);
+	width: 416px;
+	padding-top: 0px;
+	height: 415px;
+}
+html > body #graf4 {
+	height: auto;
+	min-height: 416px;
+}
+.Txt_El3 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 180%;
+	text-align: left;
+	color: #373735;
+	line-height: 200%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	margin-right: 45px;
+	margin-top: 62px;
+	display: inline;
+	float: right;
+	margin-bottom: 0;
+	width: 394px;
+}

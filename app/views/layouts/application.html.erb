@@ -6,6 +6,11 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
+    <%= stylesheet_link_tag "landing" %>
+    <!--[if IE]>
+    <style type="text/css" media="all">.borderitem {border-style: solid;}</style>
+    <![endif]-->
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -14,150 +19,15 @@
   <body>
 
 
-<!-- Navigation -->
- 
- <div class="fixed contain-to-grid">
-  <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1>
-          <a href="/">
-            BuenConocer
-          </a>
-        </h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-    </ul>
- 
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Recursos</a>
-          <ul class="dropdown">
-            <li><label>Section Name</label></li>
-            <li class="has-dropdown">
-              <a href="#" class="">Has Dropdown, Level 1</a>
-              <ul class="dropdown">
-                <li><a href="#">Dropdown Options</a></li>
-                <li><a href="#">Dropdown Options</a></li>
-                <li><a href="#">Level 2</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><label>Section Name</label></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-        <li><a href="#">Participa</a></li>
-      </ul>
-    </section>
-  </nav>
+<div id="main">
+  <div id="logo">
   </div>
- 
-  <!-- End Top Bar -->
- 
-  <div class="row" style="margin-top: 60px;">
-    <div class="large-12 columns">
-<div style="text-align: center;">
-    <%= image_tag('logo.png') %>
-    </div>
+  <div class="clearFloat"></div>
 
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <%= yield %>
 
 
-
-      </div>
-      </div>
- 
-    <!-- End Content -->
- 
-<%= form_for @signer, :url => sign_path do |f| %>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Nombre</label>
-      <%= f.text_field :name, :placeholder => "Nombre completo", :required => true %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Correo Electrónico</label>
-      <%= f.email_field :email, :placeholder => "Dirección de correo de contacto", :required => true %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Institución / Empresa / Colectivo</label>
-      <%= f.text_field :collective, :placeholder => "Nombre completo" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>País</label>
-      <%= f.text_field :state, :placeholder => "País de residencia", :required => true %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Comentarios</label>
-      <%= f.text_area :comment, :placeholder => "Comentarios adicionales" %>
-    </div>
-  </div>
-  <div class="row">
-  <button type="submit">Submit</button>
-  </div>
-<% end %>
-
-
-
-    <!-- Footer -->
- 
-      <footer class="row">
-        <div class="large-12 columns"><hr>
-            <div class="row">
- 
-              <div class="large-6 columns">
-                  <p>&copy; Copyright no one at all. Go to town.</p>
-              </div>
- 
-              <div class="large-6 small-12 columns">
-                  <ul class="inline-list right">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                  </ul>
-              </div>
- 
-            </div>
-        </div>
-      </footer>
- 
-    <!-- End Footer -->
- 
-    </div>
-  </div>
- 
-
-
+</div>
 
 
 

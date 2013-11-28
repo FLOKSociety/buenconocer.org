@@ -13,3 +13,19 @@
 
  *= require_tree .
  */
+
+#footer-form {
+		width: 80%;
+		margin: 0 10% 0 10%;
+		font-size: 2em;
+}
+
+#footer-form textarea {
+	height: 150px;
+}
+
+#thanks {
+	font-size: 5em;
+	text-align: center;
+	margin-top: 20px;
+}

@@ -16,7 +16,6 @@ class PagesController < ApplicationController
   end
 
   def signed
-  	render :text => "Gracias por firmar el manifiesto"
   end
 
   private
