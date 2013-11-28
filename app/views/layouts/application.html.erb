@@ -13,6 +13,7 @@
 
   <body>
 
+
 <!-- Navigation -->
  
  <div class="fixed contain-to-grid">
@@ -89,7 +90,44 @@
  
     <!-- End Content -->
  
- 
+<%= form_for @signer, :url => sign_path do |f| %>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Nombre</label>
+      <%= f.text_field :name, :placeholder => "Nombre completo", :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Correo Electrónico</label>
+      <%= f.email_field :email, :placeholder => "Dirección de correo de contacto", :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Institución / Empresa / Colectivo</label>
+      <%= f.text_field :collective, :placeholder => "Nombre completo" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>País</label>
+      <%= f.text_field :state, :placeholder => "País de residencia", :required => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Comentarios</label>
+      <%= f.text_area :comment, :placeholder => "Comentarios adicionales" %>
+    </div>
+  </div>
+  <div class="row">
+  <button type="submit">Submit</button>
+  </div>
+<% end %>
+
+
+
     <!-- Footer -->
  
       <footer class="row">
