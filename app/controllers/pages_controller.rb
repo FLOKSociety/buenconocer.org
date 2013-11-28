@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  http_basic_authenticate_with name: "conocer", password: "conocer"
+
   def index
   	@signer = Signer.new
   end
