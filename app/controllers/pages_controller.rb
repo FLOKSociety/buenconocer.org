@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  http_basic_authenticate_with name: "conocer", password: "conocer"
+  #http_basic_authenticate_with name: "conocer", password: "conocer"
 
   def index
   	@signer = Signer.new
@@ -23,6 +23,6 @@ class PagesController < ApplicationController
   private
 
   def signer_params
-  	params.require(:signer).permit(:name, :email, :collective, :state, :comment)
+  	params.require(:signer).permit(:name, :email, :url, :collective, :state, :comment)
   end
 end

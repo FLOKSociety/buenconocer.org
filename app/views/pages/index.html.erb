@@ -64,6 +64,12 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
+      <label>Sitio Web</label>
+      <%= f.url_field :url, :placeholder => "http://www.example.org/" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
       <label>Institución / Empresa / Colectivo</label>
       <%= f.text_field :collective, :placeholder => "Nombre completo de la agrupación" %>
     </div>
