@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
 
-  #http_basic_authenticate_with name: "conocer", password: "conocer"
-
   def index
   	@signer = Signer.new
   end
@@ -9,15 +7,32 @@ class PagesController < ApplicationController
   def sign_manifesto
   	@signer = Signer.new(signer_params)
   	if @signer.save
-  		flash[:notice] = "Gracias por firmar el manifiesto"
-  		redirect_to signed_url
+      Mailman.send_message_to_validate_sign(@signer).deliver
+  		redirect_to unverified_url
   	else
-  		flash[:error] = "Revisa los datos introducidos en el formulario"
   		render :index
   	end
   end
 
+  def unverified
+  end
+
+  def verify
+    signer = Signer.where(:code => params[:code]).first
+    if signer
+      signer.validated = true
+      signer.code = nil
+      signer.save
+      redirect_to signed_url
+    else
+      redirect_to fail_url
+    end
+  end
+
   def signed
+  end
+
+  def fail
   end
 
   private

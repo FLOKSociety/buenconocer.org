@@ -3,7 +3,10 @@ Buenconocer::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   post 'sign' => 'pages#sign_manifesto'
+  get 'verify/:code' => 'pages#verify'
+  get 'unverified' => 'pages#unverified'
   get 'signed' => 'pages#signed'
+  get 'fail' => 'pages#fail'
 
   # You can have the root of your site routed with "root"
   root 'pages#index'
